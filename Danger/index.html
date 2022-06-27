@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="shortcut icon" type="x-icon"
+        href="https://img.favpng.com/11/2/1/computer-icons-clip-art-scalable-vector-graphics-portable-network-graphics-png-favpng-pzuxPhBj8Z8WM4MmB8DETepJp_t.jpg">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SUBACITO</title>
+    <title>TRANG CHỦ - SUBACITO</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="side-bar">
+            <div class="logo">
+                <img onclick="location.href='#'" style="cursor: pointer"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcUV-LJzXmSm5T84lG2U-balWkOL8f02CM9zhoonO1ZDwCD63fVJM61zCn4tE0KW4YyF0&usqp=CAU"
+                    alt="">
+                <div><span>ADMIN</span></div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-calendar" style="padding: 0px 10px;"></i>Calendar</a></li>
+                    <li><a href=""><i class="fa-solid fa-calendar" style="padding: 0px 10px;"></i>Mark</a></li>
+                    <li><a href=""><i class="fa-solid fa-calendar" style="padding: 0px 10px;"></i>Me</a></li>
+                    <li><a href=""><i class="fa-solid fa-calendar" style="padding: 0px 10px;"></i>Test</a></li>
+                    <li><a href=""><i class="fa-solid fa-calendar" style="padding: 0px 10px;"></i>Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="header-main">
+                <span>Calendar LAB</span>
+            </div>
+            <!-- ================================================================================================= -->
+            <!-- Calendar 1 -->
+            <!-- week 1 -->
+            <div class="test-table" id="test-table">
+                <button id="addModal">+</button>
+                <div id="date-current-fill"></div>
+                <table class="table" id="tblAct">
+                    <thead>
+                        <tr style="border: 1px solid gray">
+                            <!-- <th scope="col" style="border: 1px solid gray"><span>#</span></th> -->
+                            <th scope="col" style="border: 1px solid gray"><span></span></th>
+                            <th scope="col" style="border: 1px solid gray" class="monday"><span>Thứ hai</span></th>
+                            <th scope="col" style="border: 1px solid gray" class="tuesday"><span>Thứ ba</span></th>
+                            <th scope="col" style="border: 1px solid gray" class="wednesday"><span>Thứ tư</span></th>
+                            <th scope="col" style="border: 1px solid gray" class="thursday"><span>Thứ năm</span></th>
+                            <th scope="col" style="border: 1px solid gray" class="friday"><span>Thứ sáu</span></th>
+                            <th scope="col" style="border: 1px solid gray" class="saturday"><span>Thứ bảy</span></th>
+                            <th scope="col" style="border: 1px solid gray" class="sunday"><span>Chủ nhật</span></th>
+                            <th scope="col" style="border: 1px solid gray" id="action-for-ad"><span>ACTION</span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblAct">
+                    </tbody>
+                </table>
+            </div>
+            <!-- ================================================================================================= -->
+            <!-- Calendar Responsive -->
+            <div class="test-table-2">
+                <div class="date-current-fill-2">...</div>
+                <table class="table2" id="tblAct2">
+                    <thead class="thead-test-table-2">
+                        <tr>
+                            <th class="dc-week-day monday">Thứ hai</th>
+                            <td class="thu-2"></td>
+                        </tr>
+                        <tr>
+                            <th class="dc-week-day tuesday">Thứ ba</th>
+                            <td class="thu-3"></td>
+                        </tr>
+                        <tr>
+                            <th class="dc-week-day wednesday">Thứ tư</th>
+                            <td class="thu-4"></td>
+                        </tr>
+                        <tr>
+                            <th class="dc-week-day thursday">Thứ năm</th>
+                            <td class="thu-5"></td>
+                        </tr>
+                        <tr>
+                            <th class="dc-week-day friday">Thứ sáu</th>
+                            <td class="thu-6"></td>
+                        </tr>
+                        <tr>
+                            <th class="dc-week-day saturday">Thứ bảy</th>
+                            <td class="thu-7"></td>
+                        </tr>
+                        <tr>
+                            <th class="dc-week-day sunday">Chủ nhật</th>
+                            <td class="cn"></td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <!-- ================================================================================================= -->
+        <!-- Form to add -->
+        <div class="modal">
+            <div class="modal-add-wrapper">
+                
+                <form id="form-to-add">
+                    <div class="form-group">
+                        <span id="txtId"></span>
+                    </div>
+                    <div class="form-group">
+                        <!-- <input class="form-control" type="text" name="" id="time" placeholder="Thời gian"> -->
+                        <select id="time">
+                            <option value="Sáng">Sáng</option>
+                            <option value="Chiều">Chiều</option>
+                            <option value="Tối">Tối</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="" id="T2" placeholder="Thứ 2">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="" id="T3" placeholder="Thứ 3">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="" id="T4" placeholder="Thứ 4">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="" id="T5" placeholder="Thứ 5">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="" id="T6" placeholder="Thứ 6">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="" id="T7" placeholder="Thứ 7">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="" id="CN" placeholder="Chủ nhật">
+                    </div>
+                    <div class="form-group d-flex justify-content-end">
+                        <button type="button" class="btn btn-primary" id="btnModalAdd">ADD</button>
+                        <button type="button" class="btn btn-secondary" id="btnModalCancel">CANCEL</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- ================================================================================================= -->
+            <!-- Modal to edit -->
+            <div id="ModalEdit">
+                <form id="form-to-edit">
+                    <div class="form-group">
+                        <span id="txtId"></span>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="" id="timeUpdate" placeholder="Thời gian">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="" id="T2Update" placeholder="Thứ 2">
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="" id="T3Update" placeholder="Thứ 3">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="" id="T4Update" placeholder="Thứ 4">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="" id="T5Update" placeholder="Thứ 5">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="" id="T6Update" placeholder="Thứ 6">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="" id="T7Update" placeholder="Thứ 7">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="" id="CNUpdate" placeholder="Chủ nhật">
+                    </div>
+                    <div class="form-group d-flex justify-content-end">
+                        <button type="button" class="btn btn-primary" id="btnModalUpdate">UPDATE</button>
+                        <button type="button" class="btn btn-secondary" id="btnModalCancelEdit">CANCEL</button>
+                    </div>
+                </form>
+                <!-- ================================================================================================= -->
+            </div>
+        </div>
+        <button type="button" class="scroll-to-top btn-position btnstyle"><i class="fa-solid fa-angle-up"></i></button>
+    </div>
+    <script src="scrollToTop.js"></script>
+    <script src="api.js"></script>
+    <script src="api-mobile.js"></script>
+</body>
+
+</html>
